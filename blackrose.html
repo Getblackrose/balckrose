@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blackrose — Where pain exists, understanding blooms.</title>
+  <meta name="description" content="Blackrose is a nonprofit organization devoted to healing emotional suffering and awakening a deeper understanding of life." />
+
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --panel:#0f0f16;
+      --text:#f2f2f7;
+      --muted:#b6b7c2;
+      --line:#232336;
+
+      --btn-bg:#ffffff;
+      --btn-text:#000000;
+
+      --radius:16px;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+
+      --wrap:1100px;
+      --p:24px;
+      --p-lg:56px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--wrap); margin:0 auto; padding:var(--p)}
+    .section{padding:var(--p-lg) 0}
+    .stack > * + *{margin-top:14px}
+
+    header{
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,11,16,.72);
+      border-bottom:1px solid var(--line);
+      z-index: 10;
+    }
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    .brand{
+      font-weight:800;
+      font-size:18px;
+      letter-spacing:.4px;
+    }
+
+    .btn{
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.85);
+      background:var(--btn-bg);
+      color:var(--btn-text);
+      font-weight:650;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.25);
+      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,.35);}
+    .btn:active{transform: translateY(0px); opacity:.92;}
+    .btn:focus-visible{outline:2px solid #fff; outline-offset:4px;}
+
+    .btn--ghost{
+      background: transparent;
+      color: var(--text);
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow:none;
+    }
+    .btn--ghost:hover{box-shadow:none; transform: translateY(-1px); border-color: rgba(255,255,255,.35);}
+
+    h1{
+      font-size:46px;
+      line-height:1.15;
+      margin:0 0 16px;
+      letter-spacing:-.4px;
+    }
+    h2{
+      font-size:26px;
+      margin:0 0 14px;
+      letter-spacing:-.2px;
+    }
+    p{
+      margin:0;
+      color:var(--muted);
+      max-width: 78ch;
+    }
+
+    .hero{
+      padding-top: calc(var(--p-lg) + 6px);
+    }
+    .hero .lead{
+      font-size: 16px;
+    }
+    .hero-actions{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:start;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns: 1fr;}
+      h1{font-size:38px;}
+      .section{padding:40px 0;}
+    }
+
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:-.2px;
+      color: var(--text);
+    }
+    .card p{color: var(--muted);}
+
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .list li{margin:10px 0;}
+    .kicker{
+      display:inline-block;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:999px;
+      color: rgba(242,242,247,.9);
+      font-size: 13px;
+      letter-spacing:.2px;
+      background: rgba(255,255,255,.03);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:36px 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Blackrose</div>
+
+    <!-- 外链保留 -->
+    <a class="btn" href="https://nowpayments.io/pos-terminal/blackrose" target="_blank" rel="noopener noreferrer">
+      Donate
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="wrap section hero">
+  <span class="kicker">Nonprofit • Emotional support • Life understanding</span>
+
+  <h1>
+    Where pain exists,<br/>
+    understanding blooms.
+  </h1>
+
+  <p class="lead">
+    Blackrose is a nonprofit organization devoted to healing emotional suffering
+    and awakening a deeper understanding of life — through compassion,
+    presence, and human connection.
+  </p>
+
+  <div class="hero-actions">
+    <!-- 外链保留（合并成统一按钮样式复用） -->
+    <a class="btn" href="https://nowpayments.io/pos-terminal/blackrose" target="_blank" rel="noopener noreferrer">
+      Support Blackrose
+    </a>
+    <a class="btn btn--ghost" href="#about">Learn more</a>
+  </div>
+</section>
+
+<!-- ABOUT + MISSION -->
+<section class="wrap section" id="about">
+  <div class="grid">
+    <div class="stack">
+      <h2>About Blackrose</h2>
+
+      <p>
+        <strong>Blackrose</strong> is a nonprofit organization devoted to
+        <em>healing emotional suffering and awakening a deeper understanding of life</em>.
+      </p>
+
+      <p>
+        We believe that humanity’s deepest pain often does not come from reality itself,
+        but from misunderstanding life, rejecting the self, and enduring loneliness
+        without being understood.
+      </p>
+
+      <p>
+        Blackrose was born from a simple yet urgent vision:
+        <strong>
+          to ensure that every person experiencing emotional or existential pain
+          can be seen, understood, and supported in finding reconciliation with life again.
+        </strong>
+      </p>
+
+      <h2>Our Mission</h2>
+      <ul class="list">
+        <li><strong>Easing emotional suffering</strong> — supporting individuals facing anxiety, depression, emptiness, trauma, and existential distress.</li>
+        <li><strong>Understanding life itself</strong> — exploring questions like <em>Who am I? Why do I live? Does suffering have meaning?</em></li>
+        <li><strong>Creating safe, compassionate spaces</strong> — non-judgmental, non-commercial, label-free listening and companionship.</li>
+        <li><strong>Advancing mental health as a public good</strong> — making emotional well-being and life education accessible to all.</li>
+      </ul>
+    </div>
+
+    <aside class="stack">
+      <div class="card">
+        <h3>Why “Blackrose”</h3>
+        <p>
+          The rose symbolizes life, beauty, and love. Black symbolizes pain, shadow,
+          and the parts of life often ignored.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What we stand for</h3>
+        <p><em>Even in the deepest darkness, life can still bloom with understanding and dignity.</em></p>
+        <p><strong>We do not deny pain. We stand beside it.</strong></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="wrap section">
+  <h2>What We Do</h2>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr;">
+    <div class="card">
+      <h3>Emotional companionship & listening</h3>
+      <p>We offer sincere, professional, and non-profit listening and support for those in pain.</p>
+    </div>
+    <div class="card">
+      <h3>Life understanding content</h3>
+      <p>Through writing, audio, dialogue, and practice, we guide deeper understanding of self, suffering, and existence.</p>
+    </div>
+    <div class="card">
+      <h3>Public education programs</h3>
+      <p>We develop mental well-being and life education initiatives for youth, marginalized communities, and high-pressure populations.</p>
+    </div>
+    <div class="card">
+      <h3>Crisis support & referrals</h3>
+      <p>When necessary, we assist individuals in connecting with professional psychological and medical resources.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="wrap section">
+  <h2>Donate</h2>
+
+  <div class="grid">
+    <div class="stack">
+      <p>
+        Emotional pain is often invisible, yet urgent.
+        Your donation allows Blackrose to provide free emotional support,
+        create meaningful life-understanding resources,
+        and reach people who might otherwise remain unseen.
+      </p>
+
+      <p>
+        <strong>
+          Your support may not only change a moment —
+          it may restore someone’s trust in life.
+        </strong>
+      </p>
+
+      <!-- 外链保留 -->
+      <a class="btn" href="https://nowpayments.io/pos-terminal/blackrose" target="_blank" rel="noopener noreferrer">
+        Donate via NowPayments
+      </a>
+    </div>
+
+    <aside class="card">
+      <h3>Transparency</h3>
+      <p>
+        Donations help fund listening support, educational content, and outreach.
+        We aim to keep our work accessible and compassionate.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="wrap section">
+  <h2>Contact</h2>
+  <p>
+    For collaboration, support, or inquiries, email us anytime:
+    <br/>
+    <a href="mailto:getblackrose@proton.me">getblackrose@proton.me</a>
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>© <span id="year"></span> Blackrose</div>
+    <div>Where pain exists, understanding blooms.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
